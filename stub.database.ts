@@ -1,4 +1,4 @@
-export function getUserEmail() {
-
+export function getUserEmail(id: number) {
+  return "xxx@abc.com"
 }
 
