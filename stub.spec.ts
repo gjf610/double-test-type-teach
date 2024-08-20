@@ -1,9 +1,9 @@
-import { vi, it, expect, describe } from 'vitest'
-
+import { vi, it, expect } from 'vitest'
 import { sendWelcomeEmail } from "./stub";
+
 vi.mock("./stub.database.ts", () => {
   return {
-    getUserEmail: () => "test@email.com"
+    getUserEmail: vi.fn(() => "test@email.com")
   }
 })
 it('sendWelcomeEmail sends to the correct address', async () => {
